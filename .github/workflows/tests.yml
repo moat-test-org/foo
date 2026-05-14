@@ -18,6 +18,8 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v6
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
 
     - name: Setup PHP
       uses: shivammathur/setup-php@accd6127cb78bee3e8082180cb391013d204ef9f # v2
